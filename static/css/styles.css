@@ -2,7 +2,7 @@ body {
     background: linear-gradient(180deg, #f4fbf6 0%, #eef5ff 100%);
     min-height: 100vh;
 }
-
+/*agrando colores a los marcos */
 .agenda-marco {
     background: linear-gradient(135deg, #dff5e6 0%, #dbeafe 100%);
     border: 2px solid #9fd3ad;

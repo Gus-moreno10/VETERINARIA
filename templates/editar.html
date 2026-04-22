@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Editar Cita{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+                <h1 class="h2 fw-bold mb-4">Editar cita</h1>
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="mascota" class="form-label">Nombre de la mascota</label>
+                        <input type="text" class="form-control" id="mascota" name="mascota" value="{{ cita.mascota }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="propietario" class="form-label">Nombre del propietario</label>
+                        <input type="text" class="form-control" id="propietario" name="propietario" value="{{ cita.propietario }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="especie" class="form-label">Especie</label>
+                        <input type="text" class="form-control" id="especie" name="especie" value="{{ cita.especie }}">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="fecha" class="form-label">Fecha de la cita</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" value="{{ cita.fecha_base }}" required>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="hora" class="form-label">Horario disponible</label>
+                            <select class="form-select" id="hora" name="hora" required>
+                                <option value="">Selecciona una hora</option>
+                                {% for horario in horarios %}
+                                    <option value="{{ horario }}" {% if cita.hora == horario %}selected{% endif %}>{{ horario }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Actualizar cita</button>
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

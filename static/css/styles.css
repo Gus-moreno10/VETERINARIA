@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(180deg, #f4fbf6 0%, #eef5ff 100%);
+    min-height: 100vh;
+}
+
+.agenda-marco {
+    background: linear-gradient(135deg, #dff5e6 0%, #dbeafe 100%);
+    border: 2px solid #9fd3ad;
+    box-shadow: 0 12px 30px rgba(68, 113, 84, 0.12);
+}
+
+.card-cita {
+    background: linear-gradient(180deg, #ffffff 0%, #f7fff9 100%);
+    border: 1px solid #9fd3ad;
+    border-left: 6px solid #198754;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-cita:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(25, 135, 84, 0.16);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.2);
+}

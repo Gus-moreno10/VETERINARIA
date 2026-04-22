@@ -20,7 +20,7 @@ HORARIOS_DISPONIBLES = [
     "03:00 PM",
     "04:00 PM",
 ]
-
+# creando la funcion get db
 
 def get_db():
     if "db" not in g:
